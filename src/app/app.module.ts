@@ -11,6 +11,7 @@ import { DomHelperService } from './services/dom/dom.helper.service';
 
 import {ButtonModule } from 'primeng/primeng';
 import { ZkHeaderComponent } from './components/zk-header/zk-header.component';
+import { ZkLoaderComponent } from './components/zk-loader/zk-loader.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ZkHeaderComponent } from './components/zk-header/zk-header.component';
     CommonComponent,
     DashboardComponent,
     ZkHeaderComponent,
+    ZkLoaderComponent,
   ],
   imports: [
     BrowserModule,
