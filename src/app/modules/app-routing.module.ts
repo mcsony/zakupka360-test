@@ -7,7 +7,7 @@ import { CommonComponent } from '../components/common/common.component';
 const routes: Routes = [
   { path: '',  redirectTo: '/' , pathMatch: 'full'},
   { path: '',  component: DashboardComponent, data: {name: 'Главная страница', url: 'app'}},
-  { path: 'search:query',  component: CommonComponent, data: {name: 'Поиск', url: 'search'}}
+  { path: 'search/:query',  component: CommonComponent, data: {name: 'Поиск', url: 'search'}}
 ];
 
 @NgModule({
