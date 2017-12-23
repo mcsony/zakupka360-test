@@ -1,8 +1,7 @@
-<div class="layout-wrapper">
+<div class="layout-wrapper" [style]="{'height': layoutWrapperHeight, 'background': bg}">
   <app-zk-header></app-zk-header>
-
-  <div id="layout-content">
-    <div style="margin-top: 70px">
+  <div id="layout-content" [style]="{'height': layoutWrapperHeight, 'background': bg}">
+    <div>
       <router-outlet></router-outlet>
     </div>
   </div>

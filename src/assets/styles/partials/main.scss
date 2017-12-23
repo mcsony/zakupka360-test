@@ -1,6 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
 body{
-  min-height: 100vh;
   height: auto;
   margin: 0;
 
@@ -15,10 +14,8 @@ input:focus {
 
 
 .layout-wrapper{
-  min-height: 100vh;
-  height: auto;
-  margin: -98px 0 0;
-  background: red;
+  //height: 90vh;
+  //background: lime;
   #layout-topbar {
     min-width: 760px !important;
     background-color: #ffffff;
@@ -80,9 +77,7 @@ input:focus {
     background-color: #ffffff;
     font-size: 1.4em;
     min-width: $content-min-width !important;
-    min-height: 100vh;
-    height: auto;
-    margin: 0;
+    margin: 70px 0 0;
     width: 100%;
     .layout-mask {
       z-index: 999997;
