@@ -9,10 +9,7 @@ import { AppRoutingModule } from './modules/app-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { DomHelperService } from './services/dom/dom.helper.service';
 
-import {
-  PanelModule,
-  TooltipModule,
-  DropdownModule} from 'primeng/primeng';
+import {ButtonModule } from 'primeng/primeng';
 import { ZkHeaderComponent } from './components/zk-header/zk-header.component';
 
 @NgModule({
@@ -24,6 +21,7 @@ import { ZkHeaderComponent } from './components/zk-header/zk-header.component';
   ],
   imports: [
     BrowserModule,
+    ButtonModule,
     AppRoutingModule
   ],
   providers: [DomHelperService],

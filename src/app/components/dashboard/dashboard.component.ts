@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  public placeholder: string;
+  public query: string;
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.placeholder = 'Поиск твитов';
+  }
+  onSearch ($event) {
+    // получаем значение инпута
+    this.query = $event.srcElement.value ;
+    // переход на страницу результатов
+    this.router.navigateByUrl('/search/' + this.query);
   }
 
 }
