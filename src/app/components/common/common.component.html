@@ -1,0 +1,19 @@
+<div>
+  <p-growl [life]="123000"></p-growl>
+  <app-zk-loader [isActive]="requestIsLoading"></app-zk-loader>
+  <div *ngIf="!requestIsLoading">
+    <p-dataList [emptyMessage]="emptyMessage" [value]="twits">
+      <p-header> Список твитов </p-header>
+      <ng-template let-twit pTemplate="item">
+
+        <div class="ui-g ui-fluid twit-item" *ngIf="twit.entities && twit.entities.urls && twit.entities.urls.length">
+          <div class="ui-g-12 ui-md-9 car-details">
+            <div class="ui-g">
+              <div class="ui-g-12 ui-sm-12"><a target="_blank" href="{{ (twit.entities && twit.entities.urls && twit.entities.urls.length) ? twit.entities.urls[0].url :  '#' }}">{{ twit.text }}</a></div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-dataList>
+  </div>
+</div>
