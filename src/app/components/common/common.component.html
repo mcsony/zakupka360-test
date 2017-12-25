@@ -1,7 +1,8 @@
 <div>
+  <p-growl [life]="123000"></p-growl>
   <app-zk-loader [isActive]="requestIsLoading"></app-zk-loader>
-  <div>
-    <p-dataList [value]="twits">
+  <div *ngIf="!requestIsLoading">
+    <p-dataList [emptyMessage]="emptyMessage" [value]="twits">
       <p-header> Список твитов </p-header>
       <ng-template let-twit pTemplate="item">
 

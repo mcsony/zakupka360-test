@@ -2,10 +2,12 @@ import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions } from '@angular/http';
 import { AppSettings } from '../../../settings';
 import { Twit } from '../../models/twit';
+import { MessageService } from 'primeng/components/common/messageservice';
+
 @Injectable()
 export class TwitsService {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private messageService: MessageService) { }
   public static getHeaders() {
     const headers = new Headers();
     headers.append(AppSettings.getConfig()['DEFAULT_HEADER_KEY'], (AppSettings.getConfig()['HEADER_PREFIX'] +
@@ -29,7 +31,10 @@ export class TwitsService {
 
         return data;
       })
-      .catch((error) => { console.log(error); });
+      .catch((error) => { console.log(error); this.showViaService('ошибка при получении твитов', 'error'); });
 
+  }
+  showViaService(message, severity, summary = 'ошибка') {
+    this.messageService.add({severity: severity, summary: summary, detail: message});
   }
 }

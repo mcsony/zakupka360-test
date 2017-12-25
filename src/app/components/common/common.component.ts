@@ -14,6 +14,7 @@ export class CommonComponent implements OnInit {
   private requestParams ;
   public requestIsLoading ;
   public query ;
+  public emptyMessage = 'Нет данных.';
   public paramLabel = 'query' ;
   public twits: Array<Twit>;
   public headers = [
