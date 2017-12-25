@@ -14,8 +14,6 @@
 
 ### Создание файла конфигурации
  * Клонировать файл src/settings.ts.tpl и называть новый файл src/settings.ts
- * ЗАПОЛНИТЬ КАК МИНИМУМ НАЗВАНИЕ ХОСТА (BASE_DOMAIN) И ПОМЕНЯТЬ ENV ИЗ DEV НА PROD ДЛЯ ПРОДАКШЕНА.
-
 ### Запуск на деве
  `npm start` .  Открыть `http://localhost:4200/`.
 
@@ -25,5 +23,5 @@
  * все файлы собираются в папке `dist/`.
 
 ## БАСКЕНД
- Запустить node backend/index.js
+ Запустить node backend/index.js (localhost:3000)
 
