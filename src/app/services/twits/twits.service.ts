@@ -31,10 +31,16 @@ export class TwitsService {
 
         return data;
       })
-      .catch((error) => { console.log(error); this.showViaService('ошибка при получении твитов', 'error'); });
+      .catch((error) => {
+      let message = 'ошибка при получении твитов.';
+      if (parseInt(error.status, 10) === 0) {
+        message += ' Убедитесь что файл /backend/index.js запушен.';
+      }
+      this.showViaService(message, 'error');
+   });
 
   }
-  showViaService(message, severity, summary = 'ошибка') {
+  showViaService(message, severity, summary = 'Ошибка') {
     this.messageService.add({severity: severity, summary: summary, detail: message});
   }
 }

@@ -24,6 +24,10 @@
     "core-js": "^2.4.1",
     "primeng": "^5.0.2",
     "rxjs": "^5.5.2",
+    "body-parser": "^1.12.2",
+    "cors": "^2.8.4",
+    "express": "^4.12.3",
+    "twitter-node-client": "*",
     "zone.js": "^0.8.14"
   },
   "devDependencies": {
