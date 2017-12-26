@@ -1,7 +1,7 @@
 <div>
-  <p-growl [life]="123000"></p-growl>
   <app-zk-loader [isActive]="requestIsLoading"></app-zk-loader>
   <div *ngIf="!requestIsLoading">
+    <a type="button" icon="fa-search" routerLink="/"><button pButton type="button" icon="fa-arrow-left" class="ui-button-success"></button>К поиску</a>
     <p-dataList [emptyMessage]="emptyMessage" [value]="twits">
       <p-header> Список твитов </p-header>
       <ng-template let-twit pTemplate="item">

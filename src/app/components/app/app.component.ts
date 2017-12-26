@@ -14,6 +14,5 @@ export class AppComponent implements OnInit {
   constructor (private domHelperService: DomHelperService) {}
   ngOnInit () {
     this.layoutWrapperHeight = (100 - this.domHelperService.pxTovh(70)) + 'vh';
-    console.log(this.layoutWrapperHeight);
   }
 }

@@ -36,11 +36,11 @@ export class TwitsService {
       if (parseInt(error.status, 10) === 0) {
         message += ' Убедитесь что файл /backend/index.js запушен.';
       }
-      this.showViaService(message, 'error');
+      this.showToast(message, 'error');
    });
 
   }
-  showViaService(message, severity, summary = 'Ошибка') {
+  showToast(message, severity, summary = 'Ошибка') {
     this.messageService.add({severity: severity, summary: summary, detail: message});
   }
 }
